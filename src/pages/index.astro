@@ -1,0 +1,45 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+import profile from "../../public/treehouse.png";
+import { Image } from "astro:assets";
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<Image
+				src="/treehouse.png"
+				width="150"
+				height="150"
+				alt="A bird sitting on a nest of eggs."
+			/>
+
+			<br />
+
+			<h4>Hey there! 👋 I'm Ben Harris</h4>
+
+			<p>
+				I’m currently working towards my undergraduate degree in
+				Computer Science at the University of York.
+			</p>
+			<p>
+				Right now, I’m living in Manchester for my placement year and
+				will be returning to York in September 2024 for the final year
+				of my degree.
+			</p>
+			<p>Check out my blog to hear about what I'm up to!</p>
+			<p>All the best,</p>
+			<p>Ben</p>
+		</main>
+
+		<Footer />
+	</body>
+</html>
